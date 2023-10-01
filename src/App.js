@@ -10,6 +10,7 @@ function App(){
         <BrowserRouter>
             <Routes>
                 <Route index element={<NewsPage />} />
+                <Route path="/news" element={<NewsPage />} />
                 <Route path="/utils" element={<UtilsPage />} />
                 <Route path="*" element={<NoPage />} />
             </Routes>

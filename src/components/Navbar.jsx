@@ -2,12 +2,11 @@ import React from "react";
 
 function Navbar(props) {
   return (
-    <>
-      <a href="http://">Link 1</a>
-      <a href="http://">Link 2</a>
-      <a href="http://">Link 3</a>
-      <a href="http://">Link 4</a>
-    </>
+    <div className="navbar-container">
+      <a className="navbar-item" href="/news">Noticias</a>
+      <a className="navbar-item" href="/utils">Utilidades</a>
+      <a className="navbar-item" href="/contact">Contacto</a>
+    </div>
   );
 }
 
