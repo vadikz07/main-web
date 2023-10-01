@@ -5,6 +5,8 @@ function Navbar(props) {
     <div className="navbar-container">
       <a className="navbar-item" href="/news">Noticias</a>
       <a className="navbar-item" href="/utils">Utilidades</a>
+      <a className="navbar-item" href="/osprojects">Proyectos Open Source</a>
+      <a className="navbar-item" href="/links">Aprender</a>
       <a className="navbar-item" href="/contact">Contacto</a>
     </div>
   );

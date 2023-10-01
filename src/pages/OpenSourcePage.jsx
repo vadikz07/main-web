@@ -3,17 +3,12 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Jumbo from "../components/Jumbo";
 
-import Dice from "./utils/DiceRoll";
-
-function UtilsPage(){
+function OpenSourceFinds(){
     return <>
         <Header />
         <Navbar />
-        <Jumbo msg="This is the Utilities Page" />
-        <Dice 
-            sides="6"
-        />
+        <Jumbo msg="This is the Open Source Page" />
     </>
 }
 
-export default UtilsPage
+export default OpenSourceFinds

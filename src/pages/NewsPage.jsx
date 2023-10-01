@@ -11,6 +11,8 @@ function NewsPage() {
       <Navbar />
       <Jumbo msg="This is the Newspage" />
       <PicCardLink
+        postedby="Juan"
+        date="1/10/23"
         title="NewsTest Card"
         description="This is a test description for a news card"
         img="http://img.jpg"
