@@ -3,24 +3,35 @@ import Header from "../components/Header";
 import NavigationBar from "../components/Navbar";
 import Jumbo from "../components/Jumbo";
 import PicCardLink from "../components/PicCardLink";
+import Accordion from "react-bootstrap/Accordion";
+import news from "../data/news";
+
+function generateNews(props) {
+  return (
+    <PicCardLink
+      header={props.header}
+      stateevent="0"
+      title={props.title}
+      date={props.date}
+      description={props.description}
+      img={props.img}
+      altimg={props.altimg}
+      textURL={props.textURL}
+      linkURL={props.linkURL}
+    />
+  );
+}
 
 function NewsPage() {
   return (
-    <>
+    <div>
       <Header />
       <NavigationBar />
-      <Jumbo msg="This is the Newspage" />
-      <PicCardLink
-        postedby="Juan"
-        date="1/10/23"
-        title="NewsTest Card"
-        description="This is a test description for a news card"
-        img="http://img.jpg"
-        altimg="Alternative text to photo"
-        linkURL="http://www.google.es"
-        textURL="Link a google"
-      />
-    </>
+      {/* <Jumbo msg="This is the Newspage" /> */}
+      <div className="news-container m-4">
+          {news.map(generateNews)}
+      </div>
+    </div>
   );
 }
 

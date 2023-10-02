@@ -1,37 +1,34 @@
 import React from "react";
+import Accordion from "react-bootstrap/Accordion";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 
 //properties of PicCardLink
 // title, description, img, altimg , textURL, linkURL
-// postedby, date
+// postedby, date ,stateevent
 
 function PicCardLink(props) {
   return (
-    <div className="card-container">
-      <div className="card-top">
-        <div className="card-title">
-          <h3>{props.title}</h3>
+    <Card bg="dark my-2" text="light" border="primary">
+      <Card.Header className="news-title-date gradient-background">
+        <div className="">{props.header}</div>
+        <div className="">{props.date}</div>
+        </Card.Header>
+      <Card.Body className="body-news pt-1">
+        <div className="news-left-content">
+          <Card.Title style={{"color":"deepskyblue"}}>{props.title}</Card.Title>
+          <Card.Text>
+            {props.description}
+          </Card.Text>
         </div>
-        <div className="card-author">
-          <h3>{props.postedby}</h3>
+        <div className="news-right-image">
+          <img className="image-news" src={props.img}/>
         </div>
-        <div className="card-date">
-          <h3>{props.date}</h3>
-        </div>
-      </div>
-      <div className="card-body">
-        <div className="card-image">
-          <img src={props.img} alt={props.altimg} />
-        </div>
-        <div className="card-description">
-          <p>{props.description}</p>
-        </div>
-      </div>
-      <div className="card-footer">
-        <div className="card-links">
-          <a href={props.linkURL}>{props.textURL}</a>
-        </div>
-      </div>
-    </div>
+      </Card.Body>
+      <Card.Footer className="news-link">
+        <Button className="link"href={props.linkURL}>{props.textURL}</Button>
+      </Card.Footer>
+    </Card>
   );
 }
 

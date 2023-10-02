@@ -9,7 +9,7 @@ import OpenSourceFinds from "./pages/OpenSourcePage";
 
 function App() {
   return (
-    <div>
+    <div className="custom-background">
       <BrowserRouter>
         <Routes>
           <Route index element={<NewsPage />} />

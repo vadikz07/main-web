@@ -1,15 +1,16 @@
 import React from "react";
+import Alert from 'react-bootstrap/Alert';
 
 //props of Jumbo:
 //msg
 
 function Jumbo(props) {
   return (
-    <div className="m-2">
-      <div role="alert" class="fade alert alert-primary show">
-        {props.msg}
-      </div>
-    </div>
+    <Alert className="m-4" key="dark" variant="dark">
+      Alert{" "}
+      <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you
+      like.
+    </Alert>
   );
 }
 

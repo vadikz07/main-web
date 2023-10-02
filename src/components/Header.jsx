@@ -1,10 +1,16 @@
 import React from "react";
 
-function Header(props){
-    return <div className="header-container gradient-background">
+function Header(props) {
+  return (
+    <div>
+      <div className="header-container gradient-background">
         {/* <img className="logo" src="/imgs/logoweb.png" /> */}
         <p className="m-2">Title</p>
+      </div>
+      <div className="white-spacer">
+      </div>
     </div>
+  );
 }
 
-export default Header
+export default Header;

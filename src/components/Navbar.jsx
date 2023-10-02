@@ -7,12 +7,9 @@ function NavigationBar(props) {
   return (
     <nav
       data-bs-theme="dark"
-      class="navbar navbar-expand navbar-light bg-primary p-0"
+      class="navbar navbar-expand navbar-light bg-dark p-0"
     >
       <div className="container d-flex navbar">
-        <a href="#home" class="navbar-brand">
-          Navbar
-        </a>
         <div className="me-auto navbar-nav">
           <a href="/news" data-rr-ui-event-key="#news" class="nav-link">
             Noticias
@@ -25,7 +22,7 @@ function NavigationBar(props) {
             data-rr-ui-event-key="#osprojects"
             class="nav-link"
           >
-            OpenSource <span class="material-symbols-outlined">whatshot</span>
+            OpenSource
           </a>
         </div>
       </div>
