@@ -3,9 +3,10 @@ import Header from "../components/Header";
 import NavigationBar from "../components/Navbar";
 import Jumbo from "../components/Jumbo";
 import PicCardLink from "../components/PicCardLink";
-import Accordion from "react-bootstrap/Accordion";
 import news from "../data/news";
-
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Footer from "../components/Footer";
 
 function generateNews(props) {
   return (
@@ -28,10 +29,12 @@ function NewsPage() {
     <div>
       <Header />
       <NavigationBar />
-      {/* <Jumbo msg="This is the Newspage" /> */}
-      <div className="news-container m-4">
-          {news.map(generateNews)}
+      <div className="body-shown">
+        <Container className="my-3">
+          <Row>{news.map(generateNews)}</Row>
+        </Container>
       </div>
+      <Footer />    
     </div>
   );
 }

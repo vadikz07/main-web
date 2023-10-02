@@ -7,8 +7,6 @@ function Header(props) {
         {/* <img className="logo" src="/imgs/logoweb.png" /> */}
         <p className="m-2">Title</p>
       </div>
-      <div className="white-spacer">
-      </div>
     </div>
   );
 }

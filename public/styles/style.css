@@ -1,22 +1,29 @@
 .header-container {
   align-items: center;
-  justify-content: center;
   color: white;
   display: flex;
   flex-flow: row nowrap;
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   height: 80px;
+  justify-content: center;
 }
 .header-container .logo {
   height: 45px;
   margin: 0px 20px;
 }
 
+#footer-grad {
+  border: 1px solid white;
+  border-left: 0px;
+  border-right: 0px;
+  background-image: linear-gradient(to right, rgb(3, 3, 3), rgb(40, 40, 40));
+}
+
 .gradient-background {
+  animation: gradient-animation 18s ease infinite;
   background: linear-gradient(300deg, deepskyblue, rgb(56, 76, 122), #0d6efd);
   background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
 }
 
 @keyframes gradient-animation {
@@ -31,8 +38,8 @@
   }
 }
 .white-spacer {
-  height: 1px;
   background-color: white;
+  height: 1px;
 }
 
 .material-symbols-outlined {
@@ -52,8 +59,8 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  width: 100%;
   margin-right: 5px;
+  width: 100%;
 }
 
 .body-news {
@@ -62,14 +69,15 @@
   justify-content: space-between;
 }
 .body-news .image-news {
-  border-radius: 5px;
   align-self: flex-start;
   border: 1px solid #0d6efd;
+  border-radius: 10px;
+  margin-top: 4px;
 }
 .body-news .news-left-content {
   display: flex;
-  width: 100%;
   flex-flow: column nowrap;
+  width: 100%;
 }
 
 .news-link {
@@ -82,6 +90,25 @@
 }
 
 .custom-background {
-  background-color: rgb(51, 51, 51);
+  background-color: rgb(52, 52, 52);
   padding-bottom: 20px;
+  padding: 0px;
+}
+
+.footer-container {
+  background-color: teal;
+  display: flex;
+  flex: 1;
+  height: 100%;
+  min-height: 100%;
+}
+
+.body-shown {
+  min-height: 500px;
+  height: auto;
+}
+
+.page-footer {
+  background-color: rgb(23, 23, 23);
+  color: white;
 }/*# sourceMappingURL=style.css.map */
