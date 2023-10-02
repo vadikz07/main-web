@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
 function Dice(props) {
-  const [roll, setRoll] = useState("Pulsa Roll");
-  const possibleDies = [4, 6, 8, 10, 12, 20];
-  const [pointer, setPointer] = useState(1);
-  const [sides, setSides] = useState(possibleDies[pointer]);
+  const [roll, setRoll] = useState("Tirar dado/s");
+  const [sides, setSides] = useState(6);
+  const [numDies, setNumDies] = useState(2);
 
   function getRandomNum(sides) {
     var num = Math.floor(Math.random() * sides + 1);
@@ -13,34 +12,65 @@ function Dice(props) {
   }
 
   function increaseSides() {
-    if (pointer < possibleDies.length - 1) {
-      setPointer((elem) => elem + 1);
-    } else {
-      console.log("already at max sides");
+    if (sides < 20) {
+      setSides(sides + 2);
     }
-    setSides(possibleDies[pointer]);
   }
 
   function decreaseSides() {
-    if (pointer > 0) {
-      setPointer((elem) => elem - 1);
-    } else {
-      console.log("already at min sides");
+    if (sides > 4) {
+      setSides(sides - 2);
     }
-    setSides(possibleDies[pointer]);
+  }
+
+  function increaseNumDies() {
+    setNumDies(numDies + 1);
+  }
+
+  function decreaseNumDies() {
+    setNumDies(numDies - 1);
+  }
+
+  function rollAllDies(sides){
+    let results = [];
+    for (let i=0; i<numDies; i++){
+      let rng = getRandomNum(sides);
+      results.push(rng);
+    }
+    console.log(results);
+    setRoll(results) //TODO: Update formatting on results output (roll state)
   }
 
   return (
     <div>
       <div>
-        Roll: {roll} // Sides: {sides}
+         Caras: {sides} || Numero de dados: {numDies}
       </div>
       <div>
-        <button onClick={() => getRandomNum(sides)}>Roll!</button>
+        Resultados: {roll}
       </div>
       <div>
-        <button onClick={decreaseSides}>Decrease</button>
-        <button onClick={increaseSides}>Increase</button>
+        <button onClick={() => rollAllDies(sides)}>Tirar dado/s</button>
+      </div>
+      <div>
+        <div className="sides-dice-div">
+          <div>
+            <p className="title-div">Numero de caras del dado:</p>
+          </div>
+          <div>
+            <button onClick={decreaseSides}>-</button>
+            <button onClick={increaseSides}>+</button>
+          </div>
+        </div>
+        <div className="sides-dice-div">
+          <div>
+            <p className="title-div">Numero de dados</p>
+          </div>
+          <div>
+            <button onClick={decreaseNumDies}>-</button>
+            <button onClick={increaseNumDies}>+</button>
+          </div>
+        </div>
       </div>
     </div>
   );
