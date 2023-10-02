@@ -5,7 +5,6 @@ import Jumbo from "../components/Jumbo";
 import PicCardLink from "../components/PicCardLink";
 import Accordion from "react-bootstrap/Accordion";
 import news from "../data/news";
-import Footer from "../components/Footer";
 
 
 function generateNews(props) {
