@@ -1,0 +1,46 @@
+.header-container {
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    height: 80px;
+  p {
+  }
+  .logo{
+      height: 45px;
+      margin: 0px 20px;
+    }
+  }
+.gradient-background {
+    animation: gradient-animation 18s ease infinite;
+    background-size: 180% 180%;
+
+  background: linear-gradient(
+    300deg,
+    deepskyblue,
+    rgb(102, 190, 220),
+    rgb(16, 95, 213)
+  );
+  }
+@keyframes gradient-animation {
+  0% {
+      background-position: 0% 50%;
+    }
+  50% {
+      background-position: 100% 50%;
+    }
+  100% {
+      background-position: 0% 50%;
+    }
+  }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+  }
+
+.navbar{
+    & *{
+        align-self: flex-end;
+    }
+}

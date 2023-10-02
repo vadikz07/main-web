@@ -5,20 +5,27 @@ import Navbar from "react-bootstrap/Navbar";
 
 function NavigationBar(props) {
   return (
-    <nav data-bs-theme="dark" class="navbar navbar-expand navbar-light bg-primary">
-      <div class="container">
+    <nav
+      data-bs-theme="dark"
+      class="navbar navbar-expand navbar-light bg-primary p-0"
+    >
+      <div className="container d-flex navbar">
         <a href="#home" class="navbar-brand">
           Navbar
         </a>
-        <div class="me-auto navbar-nav">
-          <a href="#home" data-rr-ui-event-key="#home" class="nav-link">
-            Home
+        <div className="me-auto navbar-nav">
+          <a href="/news" data-rr-ui-event-key="#news" class="nav-link">
+            Noticias
           </a>
-          <a href="#features" data-rr-ui-event-key="#features" class="nav-link">
-            Features
+          <a href="/utils" data-rr-ui-event-key="#utils" class="nav-link">
+            Utilidades
           </a>
-          <a href="#pricing" data-rr-ui-event-key="#pricing" class="nav-link">
-            Pricing
+          <a
+            href="/osprojects"
+            data-rr-ui-event-key="#osprojects"
+            class="nav-link"
+          >
+            OpenSource <span class="material-symbols-outlined">whatshot</span>
           </a>
         </div>
       </div>
