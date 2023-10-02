@@ -7,9 +7,9 @@ function NavigationBar(props) {
   return (
     <nav
       data-bs-theme="dark"
-      class="navbar navbar-expand navbar-light bg-dark p-0"
+      class=" navbar navbar-expand navbar-light bg-dark p-0"
     >
-      <div className="container d-flex navbar">
+      <div className=" container d-flex navbar">
         <div className="me-auto navbar-nav">
           <a href="/news" data-rr-ui-event-key="#news" class="nav-link">
             Noticias

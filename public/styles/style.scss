@@ -17,26 +17,26 @@ $blue-bs: #0d6efd;
   }
 }
 .gradient-background {
-    background: linear-gradient(300deg,deepskyblue,rgb(56, 76, 122),$blue-bs);
-    background-size: 180% 180%;
-    animation: gradient-animation 18s ease infinite;
-  }
-  
-  @keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+  background: linear-gradient(300deg, deepskyblue, rgb(56, 76, 122), $blue-bs);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
 
-.white-spacer{
-    height: 1px;
-    background-color: white;
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.white-spacer {
+  height: 1px;
+  background-color: white;
 }
 
 .material-symbols-outlined {
@@ -86,4 +86,6 @@ $blue-bs: #0d6efd;
 
 .custom-background {
   background-color: rgb(51, 51, 51);
+  padding-bottom: 20px;
+  
 }
