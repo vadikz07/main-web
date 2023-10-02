@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from 'react-bootstrap/Button';
 
 function Dice(props) {
   const [roll, setRoll] = useState("Tirar dado/s");
@@ -70,6 +71,7 @@ function Dice(props) {
             <button onClick={decreaseNumDies}>-</button>
             <button onClick={increaseNumDies}>+</button>
           </div>
+            <Button variant="primary">Tirar dados</Button>
         </div>
       </div>
     </div>

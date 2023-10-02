@@ -1,7 +1,20 @@
 import React from "react";
 
-function Jumbo(props){
-    return <p>Message: {props.msg}</p>
+//props of Jumbo:
+//msg
+
+function Jumbo(props) {
+  return (
+    <div className="m-2">
+      <div role="alert" class="fade alert alert-primary show">
+        {props.msg}
+      </div>
+    </div>
+  );
 }
 
-export default Jumbo
+// function Jumbo(props){
+//     return <p>Message: {props.msg}</p>
+// }
+
+export default Jumbo;

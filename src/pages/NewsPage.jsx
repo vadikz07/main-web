@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import Navbar from "../components/Navbar";
+import NavigationBar from "../components/Navbar";
 import Jumbo from "../components/Jumbo";
 import PicCardLink from "../components/PicCardLink";
 
@@ -8,7 +8,7 @@ function NewsPage() {
   return (
     <>
       <Header />
-      <Navbar />
+      <NavigationBar />
       <Jumbo msg="This is the Newspage" />
       <PicCardLink
         postedby="Juan"
