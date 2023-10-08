@@ -26,16 +26,17 @@ function generateNews(props) {
 
 function NewsPage() {
   return (
-    <div>
+    <>
       <Header />
-      <NavigationBar />
+      
+      {/* <NavigationBar />
       <div className="body-shown">
         <Container className="my-3">
           <Row>{news.map(generateNews)}</Row>
         </Container>
       </div>
-      <Footer />    
-    </div>
+      <Footer />     */}
+    </>
   );
 }
 

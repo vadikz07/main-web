@@ -1,26 +1,30 @@
 import React from "react";
-import Jumbo from "./components/Jumbo";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NewsPage from "./pages/NewsPage";
 import UtilsPage from "./pages/UtilsPage";
 import NoPage from "./pages/NoPage";
 import ExternalLinks from "./pages/ExternalLinks";
 import OpenSourceFinds from "./pages/OpenSourcePage";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
 
 function App() {
   return (
-    <div className="custom-background">
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<NewsPage />} />
-          <Route path="/news" element={<NewsPage />} />
-          <Route path="/utils" element={<UtilsPage />} />
-          <Route path="/osprojects" element={<OpenSourceFinds />} />
-          <Route path="/links" element={<ExternalLinks />} />
-          <Route path="*" element={<NoPage />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+      <>
+          <Col id="app-main-column"xs={12} s={12} md={10} lg={8}>
+            <BrowserRouter>
+              <Routes>
+                <Route index element={<NewsPage />} />
+                <Route path="/news" element={<NewsPage />} />
+                <Route path="/utils" element={<UtilsPage />} />
+                <Route path="/osprojects" element={<OpenSourceFinds />} />
+                <Route path="/links" element={<ExternalLinks />} />
+                <Route path="*" element={<NoPage />} />
+              </Routes>
+            </BrowserRouter>
+          </Col>
+      </>
   );
 }
 

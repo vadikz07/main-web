@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 
 function Dice(props) {
   const [roll, setRoll] = useState("Tirar dado/s");
@@ -32,24 +32,22 @@ function Dice(props) {
     setNumDies(numDies - 1);
   }
 
-  function rollAllDies(sides){
+  function rollAllDies(sides) {
     let results = [];
-    for (let i=0; i<numDies; i++){
+    for (let i = 0; i < numDies; i++) {
       let rng = getRandomNum(sides);
       results.push(rng);
     }
     console.log(results);
-    setRoll(results) //TODO: Update formatting on results output (roll state)
+    setRoll(results); //TODO: Update formatting on results output (roll state)
   }
 
   return (
     <div>
       <div>
-         Caras: {sides} || Numero de dados: {numDies}
+        Caras: {sides} || Numero de dados: {numDies}
       </div>
-      <div>
-        Resultados: {roll}
-      </div>
+      <div>Resultados: {roll}</div>
       <div>
         <button onClick={() => rollAllDies(sides)}>Tirar dado/s</button>
       </div>
@@ -71,7 +69,6 @@ function Dice(props) {
             <button onClick={decreaseNumDies}>-</button>
             <button onClick={increaseNumDies}>+</button>
           </div>
-            <Button variant="primary">Tirar dados</Button>
         </div>
       </div>
     </div>

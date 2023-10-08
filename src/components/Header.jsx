@@ -2,8 +2,8 @@ import React from "react";
 
 function Header(props) {
   return (
-    <div>
-      <div className="header-container gradient-background">
+    <div className="hero-container">
+      <div className="hero-logo">
         {/* <img className="logo" src="/imgs/logoweb.png" /> */}
         <p className="m-2">Title</p>
       </div>
@@ -12,3 +12,4 @@ function Header(props) {
 }
 
 export default Header;
+
