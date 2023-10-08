@@ -40,6 +40,7 @@ function ProgressTimer() {
   function resetCounter() {
     setIsTimeRunning(false);
     setTimeElapsed(0);
+    setMinutes(0);
     console.log("restarting");
   }
 
