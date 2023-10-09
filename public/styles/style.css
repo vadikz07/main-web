@@ -88,4 +88,19 @@
 }
 .butn:hover {
   background-color: rgb(187, 232, 232);
+}
+
+.butn.icon-web {
+  padding: 2px;
+  width: 64px;
+  height: 64px;
+}
+
+.svg-icons {
+  width: 32px;
+  height: 32px;
+}
+
+#cw-icon {
+  padding-top: 4px;
 }/*# sourceMappingURL=style.css.map */

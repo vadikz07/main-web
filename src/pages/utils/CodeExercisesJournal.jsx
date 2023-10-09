@@ -55,16 +55,16 @@ function CodeExercisesJournal() {
         <h6>{counters["w3schools"]}</h6>
       </div>
       <div className="increment-buttons-container">
-        <button className="butn" onClick={() => incrementCounter("codewars")}>
-          CW
+        <button className="butn icon-web" onClick={() => incrementCounter("codewars")}>
+          <object data="/imgs/codewars.svg" type="image/svg+xml" id="cw-icon" className="svg-icons"></object>
         </button>
-        <button className="butn" onClick={() => incrementCounter("leetcode")}>
+        <button className="butn icon-web" onClick={() => incrementCounter("leetcode")}>
           LC
         </button>
-        <button className="butn" onClick={() => incrementCounter("sololearn")}>
+        <button className="butn icon-web" onClick={() => incrementCounter("sololearn")}>
           SL
         </button>
-        <button className="butn" onClick={() => incrementCounter("w3schools")}>
+        <button className="butn icon-web" onClick={() => incrementCounter("w3schools")}>
           W3
         </button>
       </div>

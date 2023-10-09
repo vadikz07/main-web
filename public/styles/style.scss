@@ -96,7 +96,6 @@ $bg-grey-card: rgb(205, 205, 205);
 
   .butn {
     margin: 0px 30px;
-
     &:hover {
       background-color: rgb(198, 122, 122);
     }
@@ -104,8 +103,21 @@ $bg-grey-card: rgb(205, 205, 205);
 }
 .butn {
   border-radius: $sm-rad;
-
+  
   &:hover {
     background-color: $light-aqua;
   }
+}
+.butn.icon-web{
+  padding: 2px;
+  width: 64px;
+  height: 64px;
+}
+
+.svg-icons{
+  width: 32px;
+  height: 32px;
+}
+#cw-icon{
+  padding-top: 4px;
 }
