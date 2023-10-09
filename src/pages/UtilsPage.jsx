@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 
 import Dice from "./utils/DiceRoll";
 import ProgressTimer from "./utils/ProgressTimer";
+import CodeExercisesJournal from "./utils/CodeExercisesJournal";
 
 function UtilsPage() {
   return (
@@ -15,6 +16,7 @@ function UtilsPage() {
       <Jumbo msg="This is the Utilities Page" /> */}
       {/* <Dice sides="6" /> */}
       <ProgressTimer />
+      <CodeExercisesJournal />
       {/* <Footer /> */}
     </>
   );

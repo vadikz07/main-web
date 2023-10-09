@@ -48,4 +48,25 @@
 .container-pbar .timer-container .sec-counter {
   padding: 0px 5px;
   font-weight: bold;
+}
+
+.code-journal-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.code-journal-container .labels-container {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+.code-journal-container .increment-buttons-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+.code-journal-container .increment-buttons-container .butn {
+  border-radius: 10px;
+}
+.code-journal-container .increment-buttons-container .butn:hover {
+  background-color: rgb(187, 232, 232);
 }/*# sourceMappingURL=style.css.map */

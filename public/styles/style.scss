@@ -1,3 +1,7 @@
+$sm-rad: 5px;
+$md-rad: 10px;
+$light-aqua: rgb(187, 232, 232);
+
 .container-pbar{
   display: flex;
   flex-flow: column nowrap;
@@ -6,7 +10,7 @@
   background-color: rgb(205, 205, 205);
   margin: 10px;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: $md-rad;
   .counter-container{
    display: flex;
    flex-flow: row nowrap; 
@@ -20,13 +24,13 @@
    }
    .butn{
     &:hover{
-      background-color: rgb(187, 232, 232);
+      background-color: $light-aqua;
     }
    }
   }
   .butn{
     padding: 10px;
-    border-radius: 10px;
+    border-radius: $md-rad;
     margin: 5px 20px;
     &:hover{
       background-color: #bebebe;
@@ -36,7 +40,7 @@
     height: 15px;
     background-color: rgb(84, 84, 84);
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: $sm-rad;
     .prog-bar-fill{
       transition: width 0.1s ease-out;
     }
@@ -48,6 +52,27 @@
     .sec-counter{
       padding: 0px 5px;
       font-weight: bold;
+    }
+  }
+}
+// Code-Journal
+.code-journal-container{
+  display: flex;
+  flex-flow: column nowrap;
+  .labels-container{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+  }
+  .increment-buttons-container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    .butn{
+      border-radius: $md-rad;
+      &:hover{
+        background-color: $light-aqua;
+      }
     }
   }
 }
