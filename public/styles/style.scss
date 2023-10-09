@@ -1,78 +1,107 @@
 $sm-rad: 5px;
 $md-rad: 10px;
 $light-aqua: rgb(187, 232, 232);
+$bg-grey-card: rgb(205, 205, 205);
 
-.container-pbar{
+// Progress bar and counter
+.container-pbar {
+  background-color: $bg-grey-card;
+  border-radius: $md-rad;
   display: flex;
+  flex: 1;
   flex-flow: column nowrap;
   justify-content: center;
-  flex: 1;
-  background-color: rgb(205, 205, 205);
   margin: 10px;
   padding: 10px;
-  border-radius: $md-rad;
-  .counter-container{
-   display: flex;
-   flex-flow: row nowrap; 
-   flex: 1;
-   justify-content: center;
-   align-items: center;
-   h3{
-    padding-top: 6px;
-    width: 30px;
-    text-align: center;
-   }
-   .butn{
-    &:hover{
-      background-color: $light-aqua;
+
+  .counter-container {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    h3 {
+      padding-top: 6px;
+      text-align: center;
+      width: 30px;
     }
-   }
+    .butn {
+      &:hover {
+        background-color: $light-aqua;
+      }
+    }
   }
-  .butn{
-    padding: 10px;
+  .butn {
     border-radius: $md-rad;
     margin: 5px 20px;
-    &:hover{
+    padding: 10px;
+
+    &:hover {
       background-color: #bebebe;
     }
   }
-  .prog-bar{
-    height: 15px;
+  .prog-bar {
     background-color: rgb(84, 84, 84);
     border: 1px solid black;
     border-radius: $sm-rad;
-    .prog-bar-fill{
+    height: 15px;
+
+    .prog-bar-fill {
       transition: width 0.1s ease-out;
     }
   }
-  .timer-container{
+  .timer-container {
     display: flex;
     justify-content: center;
     padding-top: 10px;
-    .sec-counter{
-      padding: 0px 5px;
+
+    .sec-counter {
       font-weight: bold;
+      padding: 0px 5px;
     }
   }
 }
 // Code-Journal
-.code-journal-container{
+.code-journal-container {
+  background-color: $bg-grey-card;
+  border-radius: $md-rad;
   display: flex;
+  flex: 1;
   flex-flow: column nowrap;
-  .labels-container{
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+
+  .labels-container {
     display: flex;
-    justify-content: space-around;
     flex-flow: row wrap;
+    justify-content: space-around;
   }
-  .increment-buttons-container{
+  .increment-buttons-container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    .butn{
-      border-radius: $md-rad;
-      &:hover{
-        background-color: $light-aqua;
-      }
+  }
+}
+.reset-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 10px;
+
+  .butn {
+    margin: 0px 30px;
+
+    &:hover {
+      background-color: rgb(198, 122, 122);
     }
+  }
+}
+.butn {
+  border-radius: $sm-rad;
+
+  &:hover {
+    background-color: $light-aqua;
   }
 }

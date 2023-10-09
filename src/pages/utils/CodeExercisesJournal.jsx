@@ -1,31 +1,77 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Cookies from "js-cookie";
 
 function CodeExercisesJournal() {
-  const [counters, setCounters] = useState({
+  //Inicializar variables a 0
+  const initialCounters = {
     codewars: 0,
     leetcode: 0,
     sololearn: 0,
     w3schools: 0,
-  });
+  };
+
+  const [counters, setCounters] = useState(initialCounters);
+  // Intentar cargar los valores de las cookies al arrancar el componente.
+  useEffect(() => {
+    const savedCounters = Cookies.get("counters");
+    if (savedCounters) {
+      setCounters(JSON.parse(savedCounters));
+    }
+  }, []);
+
+  // Actualizar valores de cookies si hay cambios en counters
+  useEffect(() => {
+    Cookies.set("counters", JSON.stringify(counters));
+  }, [counters]);
+
   function incrementCounter(website) {
-    const updatedCounters = {...counters};
+    const updatedCounters = { ...counters };
     updatedCounters[website]++;
     setCounters(updatedCounters);
-    console.log(updatedCounters);
   }
+  function resetCounter() {
+    if (window.confirm("Are you sure do you want to reset the counters?")) {
+      console.log("pressed ok");
+      const resetValues = {};
+      // Crea un nuevo objeto con las keys de initial counters
+      for (const key in initialCounters) {
+        resetValues[key] = 0;
+      }
+      // al terminar actualiza el valor de counters, con el generado.
+      setCounters(resetValues);
+      // y lo guarda en cookies
+      Cookies.set("counters", JSON.stringify(counters));
+    } else {
+      console.log("pressed cancel");
+    }
+  }
+
   return (
     <div className="code-journal-container">
       <div className="labels-container">
-        <h6>0</h6>
-        <h6>0</h6>
-        <h6>0</h6>
-        <h6>0</h6>
+        <h6>{counters["codewars"]}</h6>
+        <h6>{counters["leetcode"]}</h6>
+        <h6>{counters["sololearn"]}</h6>
+        <h6>{counters["w3schools"]}</h6>
       </div>
       <div className="increment-buttons-container">
-          <button className="butn" onClick={() => incrementCounter("codewars")}>CW</button>
-          <button className="butn" onClick={() => incrementCounter("leetcode")}>LC</button>
-          <button className="butn" onClick={() => incrementCounter("sololearn")}>SL</button>
-          <button className="butn" onClick={() => incrementCounter("w3schools")}>W3</button>
+        <button className="butn" onClick={() => incrementCounter("codewars")}>
+          CW
+        </button>
+        <button className="butn" onClick={() => incrementCounter("leetcode")}>
+          LC
+        </button>
+        <button className="butn" onClick={() => incrementCounter("sololearn")}>
+          SL
+        </button>
+        <button className="butn" onClick={() => incrementCounter("w3schools")}>
+          W3
+        </button>
+      </div>
+      <div className="reset-container">
+        <button className="butn" onClick={() => resetCounter()}>
+          Reset
+        </button>
       </div>
     </div>
   );
