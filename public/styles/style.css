@@ -1,12 +1,15 @@
-.container-pbar {
+.card-style, .code-journal-container, .container-pbar {
   background-color: rgb(205, 205, 205);
   border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.container-pbar {
   display: flex;
   flex: 1;
   flex-flow: column nowrap;
   justify-content: center;
-  margin: 10px;
-  padding: 10px;
 }
 .container-pbar .counter-container {
   align-items: center;
@@ -51,14 +54,10 @@
 }
 
 .code-journal-container {
-  background-color: rgb(205, 205, 205);
-  border-radius: 10px;
   display: flex;
   flex: 1;
   flex-flow: column nowrap;
   justify-content: center;
-  margin: 10px;
-  padding: 10px;
 }
 .code-journal-container .labels-container {
   display: flex;

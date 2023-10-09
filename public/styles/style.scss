@@ -3,16 +3,21 @@ $md-rad: 10px;
 $light-aqua: rgb(187, 232, 232);
 $bg-grey-card: rgb(205, 205, 205);
 
-// Progress bar and counter
-.container-pbar {
+// General extenders
+.card-style{
   background-color: $bg-grey-card;
   border-radius: $md-rad;
+  margin: 10px;
+  padding: 10px;
+}
+
+// Progress bar and counter
+.container-pbar {
+  @extend .card-style;
   display: flex;
   flex: 1;
   flex-flow: column nowrap;
   justify-content: center;
-  margin: 10px;
-  padding: 10px;
 
   .counter-container {
     align-items: center;
@@ -62,16 +67,15 @@ $bg-grey-card: rgb(205, 205, 205);
     }
   }
 }
+
+
 // Code-Journal
 .code-journal-container {
-  background-color: $bg-grey-card;
-  border-radius: $md-rad;
+  @extend .card-style;
   display: flex;
   flex: 1;
   flex-flow: column nowrap;
   justify-content: center;
-  margin: 10px;
-  padding: 10px;
 
   .labels-container {
     display: flex;
