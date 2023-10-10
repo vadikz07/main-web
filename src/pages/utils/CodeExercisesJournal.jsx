@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cookies from "js-cookie";
+import Blip from "../../components/Blip";
 
 function CodeExercisesJournal() {
   //Inicializar variables a 0
@@ -45,27 +46,69 @@ function CodeExercisesJournal() {
       console.log("pressed cancel");
     }
   }
+  function renderBlips(value, colorpassed) {
+    const counter = counters[value];
+    const output = [];
+    for (let i = 0; i < counter; i++) {
+      output.push(<Blip color={colorpassed}/>);
+    }
+    return output;
+  }
 
   return (
     <div className="code-journal-container shadow-box">
       <div className="labels-container">
-        <h6>{counters["codewars"]}</h6>
-        <h6>{counters["leetcode"]}</h6>
-        <h6>{counters["sololearn"]}</h6>
-        <h6>{counters["w3schools"]}</h6>
+        <div className="blip-container">
+          <div className="blip-ind-container">{renderBlips("codewars","#f05656")}</div>
+          <div className="blip-ind-container">{renderBlips("leetcode","#e7a41f")}</div>
+          <div className="blip-ind-container">{renderBlips("sololearn","#32b7e9")}</div>
+          <div className="blip-ind-container">{renderBlips("w3schools","#04aa6d")}</div>
+        </div>
       </div>
       <div className="increment-buttons-container">
-          <button className="butn icon-web" onClick={() => incrementCounter("codewars")}>
-            <object data="/imgs/icons/codewars.svg" type="image/svg+xml" id="cw-icon" className="svg-icons"></object>
-          </button>
-        <button className="butn icon-web" onClick={() => incrementCounter("leetcode")}>
-          <object data="/imgs/icons/leetcode.svg" type="image/svg+xml" id="lc-icon" className="svg-icons"></object>
+        <button
+          className="butn icon-web"
+          onClick={() => incrementCounter("codewars")}
+        >
+          <object
+            data="/imgs/icons/codewars.svg"
+            type="image/svg+xml"
+            id="cw-icon"
+            className="svg-icons"
+          ></object>
         </button>
-        <button className="butn icon-web" onClick={() => incrementCounter("sololearn")}>
-          <object data="/imgs/icons/sololearn.svg" type="image/svg+xml" id="sl-icon" className="svg-icons"></object>
+        <button
+          className="butn icon-web"
+          onClick={() => incrementCounter("leetcode")}
+        >
+          <object
+            data="/imgs/icons/leetcode.svg"
+            type="image/svg+xml"
+            id="lc-icon"
+            className="svg-icons"
+          ></object>
         </button>
-        <button className="butn icon-web" onClick={() => incrementCounter("w3schools")}>
-          <object data="/imgs/icons/w3schools.svg" type="image/svg+xml" id="w3-icon" className="svg-icons"></object>
+        <button
+          className="butn icon-web"
+          onClick={() => incrementCounter("sololearn")}
+        >
+          <object
+            data="/imgs/icons/sololearn.svg"
+            type="image/svg+xml"
+            id="sl-icon"
+            className="svg-icons"
+          ></object>
+        </button>
+        <button
+          className="butn icon-web"
+          onClick={() => incrementCounter("w3schools")}
+        >
+          <object
+            data="/imgs/icons/w3schools.svg"
+            type="image/svg+xml"
+            id="w3-icon"
+            className="svg-icons"
+          ></object>
         </button>
       </div>
       <div className="reset-container">
