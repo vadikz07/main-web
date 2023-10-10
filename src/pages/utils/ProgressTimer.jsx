@@ -67,7 +67,7 @@ function ProgressTimer() {
   }, [isTimeRunning, minutes]);
 
   return (
-    <div className="container-pbar df-ver centered">
+    <div className="container-pbar df-ver centered shadow-box">
       <div className="prog-bar">
         <div
           className="prog-bar prog-bar-fill"

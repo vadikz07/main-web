@@ -47,7 +47,7 @@ function CodeExercisesJournal() {
   }
 
   return (
-    <div className="code-journal-container">
+    <div className="code-journal-container shadow-box">
       <div className="labels-container">
         <h6>{counters["codewars"]}</h6>
         <h6>{counters["leetcode"]}</h6>
@@ -55,17 +55,17 @@ function CodeExercisesJournal() {
         <h6>{counters["w3schools"]}</h6>
       </div>
       <div className="increment-buttons-container">
-        <button className="butn icon-web" onClick={() => incrementCounter("codewars")}>
-          <object data="/imgs/codewars.svg" type="image/svg+xml" id="cw-icon" className="svg-icons"></object>
-        </button>
+          <button className="butn icon-web" onClick={() => incrementCounter("codewars")}>
+            <object data="/imgs/icons/codewars.svg" type="image/svg+xml" id="cw-icon" className="svg-icons"></object>
+          </button>
         <button className="butn icon-web" onClick={() => incrementCounter("leetcode")}>
-          LC
+          <object data="/imgs/icons/leetcode.svg" type="image/svg+xml" id="lc-icon" className="svg-icons"></object>
         </button>
         <button className="butn icon-web" onClick={() => incrementCounter("sololearn")}>
-          SL
+          <object data="/imgs/icons/sololearn.svg" type="image/svg+xml" id="sl-icon" className="svg-icons"></object>
         </button>
         <button className="butn icon-web" onClick={() => incrementCounter("w3schools")}>
-          W3
+          <object data="/imgs/icons/w3schools.svg" type="image/svg+xml" id="w3-icon" className="svg-icons"></object>
         </button>
       </div>
       <div className="reset-container">
