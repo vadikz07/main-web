@@ -2,29 +2,27 @@ $sm-rad: 5px;
 $md-rad: 10px;
 $light-aqua: rgb(210, 226, 226);
 $bg-grey-card: rgb(205, 205, 205);
-
+$bg-blip: rgb(77, 77, 77);
 // General extenders
-.card-style{
+.card-style {
   background-color: $bg-grey-card;
   border-radius: $md-rad;
   margin: 10px;
   padding: 10px;
 }
-.shadow-box{
-  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.45);
+.shadow-box {
   border: 1px solid rgb(238, 238, 238);
+  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.45);
 }
 // General purpose
-
-
 // Progress bar and counter
 .container-pbar {
-  @extend .card-style;
   display: flex;
   flex: 1;
   flex-flow: column nowrap;
   justify-content: center;
 
+  @extend .card-style;
   .counter-container {
     align-items: center;
     display: flex;
@@ -73,16 +71,14 @@ $bg-grey-card: rgb(205, 205, 205);
     }
   }
 }
-
-
 // Code-Journal
 .code-journal-container {
-  @extend .card-style;
   display: flex;
   flex: 1;
   flex-flow: column nowrap;
   justify-content: center;
 
+  @extend .card-style;
   .labels-container {
     display: flex;
     flex-flow: row wrap;
@@ -93,34 +89,34 @@ $bg-grey-card: rgb(205, 205, 205);
     flex-flow: row nowrap;
     justify-content: space-around;
   }
-  .blip-container{
+  .blip-container {
     display: flex;
     flex: 1;
-    justify-content: space-around; 
-    margin-top: 3px;
+    justify-content: space-around;
     margin-bottom: 6px;
-    .blip-ind-container{
+    margin-top: 3px;
+
+    .blip-ind-container {
+      background-color: $bg-blip;
+      border-radius: $sm-rad;
       display: flex;
       flex-flow: column-reverse nowrap;
-      background-color: rgb(77, 77, 77);
-      height: 70px;
+      height: 62px;
       width: 64px;
-      border-radius: $sm-rad;
-      .blip{
-        width: 60px;
-        height: 5px;
-        margin: 1px 2px;
+
+      .blip {
         background-color: aquamarine;
         border-radius: $sm-rad;
+        height: 15px;
+        margin: 0px 2px;
+        border: 1px solid black;
+
+        width: 60px;
       }
     }
-
   }
 }
-
-
-
-.reset-container {
+.control-buttons-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -128,36 +124,51 @@ $bg-grey-card: rgb(205, 205, 205);
 
   .butn {
     margin: 0px 30px;
+
     &:hover {
       background-color: rgb(198, 122, 122);
+    }
+  }
+  .max-amount-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    .butn {
+      margin: 0px 10px;
+    }
+    h6 {
+      margin: 0px;
+      padding: 0px;
     }
   }
 }
 .butn {
   border-radius: $sm-rad;
-  
+
   &:hover {
     background-color: $light-aqua;
   }
 }
-.butn.icon-web{
+.butn.icon-web {
+  border-radius: 20px;
+  height: 64px;
   padding: 2px;
   width: 64px;
-  height: 64px;
-  border-radius: 20px;
 }
-
-.svg-icons{
-  width: 32px;
+.svg-icons {
   height: 32px;
   pointer-events: none;
+  width: 32px;
 }
-#cw-icon{
+#cw-icon {
   padding-top: 4px;
 }
-#lc-icon{
+#lc-icon {
   padding-top: 0px;
 }
-#sl-icon{
+#sl-icon {
   padding-top: 4px;
+}
+#w3-icon {
+  padding-top: 2px;
 }

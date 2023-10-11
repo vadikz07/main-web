@@ -6,8 +6,8 @@
 }
 
 .shadow-box {
-  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.45);
   border: 1px solid rgb(238, 238, 238);
+  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.45);
 }
 
 .container-pbar {
@@ -78,36 +78,49 @@
   display: flex;
   flex: 1;
   justify-content: space-around;
-  margin-top: 3px;
   margin-bottom: 6px;
+  margin-top: 3px;
 }
 .code-journal-container .blip-container .blip-ind-container {
+  background-color: rgb(77, 77, 77);
+  border-radius: 5px;
   display: flex;
   flex-flow: column-reverse nowrap;
-  background-color: rgb(77, 77, 77);
-  height: 70px;
+  height: 62px;
   width: 64px;
-  border-radius: 5px;
 }
 .code-journal-container .blip-container .blip-ind-container .blip {
-  width: 60px;
-  height: 5px;
-  margin: 1px 2px;
   background-color: aquamarine;
   border-radius: 5px;
+  height: 15px;
+  margin: 0px 2px;
+  border: 1px solid black;
+  width: 60px;
 }
 
-.reset-container {
+.control-buttons-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   margin: 10px;
 }
-.reset-container .butn {
+.control-buttons-container .butn {
   margin: 0px 30px;
 }
-.reset-container .butn:hover {
+.control-buttons-container .butn:hover {
   background-color: rgb(198, 122, 122);
+}
+.control-buttons-container .max-amount-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.control-buttons-container .max-amount-container .butn {
+  margin: 0px 10px;
+}
+.control-buttons-container .max-amount-container h6 {
+  margin: 0px;
+  padding: 0px;
 }
 
 .butn {
@@ -118,16 +131,16 @@
 }
 
 .butn.icon-web {
+  border-radius: 20px;
+  height: 64px;
   padding: 2px;
   width: 64px;
-  height: 64px;
-  border-radius: 20px;
 }
 
 .svg-icons {
-  width: 32px;
   height: 32px;
   pointer-events: none;
+  width: 32px;
 }
 
 #cw-icon {
@@ -140,4 +153,8 @@
 
 #sl-icon {
   padding-top: 4px;
+}
+
+#w3-icon {
+  padding-top: 2px;
 }/*# sourceMappingURL=style.css.map */

@@ -12,6 +12,7 @@ function CodeExercisesJournal() {
   };
 
   const [counters, setCounters] = useState(initialCounters);
+  const [maxValCounter, setMaxValCounter] = useState(4);
   // Intentar cargar los valores de las cookies al arrancar el componente.
   useEffect(() => {
     const savedCounters = Cookies.get("counters");
@@ -27,9 +28,17 @@ function CodeExercisesJournal() {
 
   function incrementCounter(website) {
     const updatedCounters = { ...counters };
-    updatedCounters[website]++;
+    if (updatedCounters[website] < maxValCounter) {
+      updatedCounters[website]++;
+    } else {
+      console.log("max value reached");
+    }
     setCounters(updatedCounters);
   }
+  function modifyMaxValue(value) {
+      setMaxValCounter((prevValue) => prevValue + value);
+  }
+
   function resetCounter() {
     if (window.confirm("Are you sure do you want to reset the counters?")) {
       console.log("pressed ok");
@@ -50,7 +59,7 @@ function CodeExercisesJournal() {
     const counter = counters[value];
     const output = [];
     for (let i = 0; i < counter; i++) {
-      output.push(<Blip color={colorpassed}/>);
+      output.push(<Blip color={colorpassed} />);
     }
     return output;
   }
@@ -59,10 +68,18 @@ function CodeExercisesJournal() {
     <div className="code-journal-container shadow-box">
       <div className="labels-container">
         <div className="blip-container">
-          <div className="blip-ind-container">{renderBlips("codewars","#f05656")}</div>
-          <div className="blip-ind-container">{renderBlips("leetcode","#e7a41f")}</div>
-          <div className="blip-ind-container">{renderBlips("sololearn","#32b7e9")}</div>
-          <div className="blip-ind-container">{renderBlips("w3schools","#04aa6d")}</div>
+          <div className="blip-ind-container" style={{height:maxValCounter*15}}>
+            {renderBlips("codewars", "#f05656")}
+          </div>
+          <div className="blip-ind-container" style={{height:maxValCounter*15}}>
+            {renderBlips("leetcode", "#e7a41f")}
+          </div>
+          <div className="blip-ind-container" style={{height:maxValCounter*15}}>
+            {renderBlips("sololearn", "#32b7e9")}
+          </div>
+          <div className="blip-ind-container" style={{height:maxValCounter*15}}>
+            {renderBlips("w3schools", "#04aa6d")}
+          </div>
         </div>
       </div>
       <div className="increment-buttons-container">
@@ -111,7 +128,16 @@ function CodeExercisesJournal() {
           ></object>
         </button>
       </div>
-      <div className="reset-container">
+      <div className="control-buttons-container">
+        <div className="max-amount-container">
+          <button onClick={() => modifyMaxValue(-1)} className="butn">
+            Dec
+          </button>
+          <h6>Max amount: {maxValCounter}</h6>
+          <button onClick={() => modifyMaxValue(1)} className="butn">
+            Inc
+          </button>
+        </div>
         <button className="butn" onClick={() => resetCounter()}>
           Reset
         </button>
