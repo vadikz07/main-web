@@ -5,7 +5,7 @@
   padding: 10px;
 }
 
-.shadow-box {
+.shadow-box, .sticky-notes-container .sticky-note-group {
   border: 1px solid rgb(238, 238, 238);
   box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.45);
 }
@@ -159,24 +159,43 @@
   padding-top: 2px;
 }
 
+.form-add-sticky {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.form-add-sticky input[type=text] {
+  background-color: #ddd;
+  border-radius: 5px;
+  margin: 0px 5px;
+  padding: 0px 5px;
+  text-align: center;
+}
+.form-add-sticky input[type=submit] {
+  margin: 0px 5px;
+  padding: 0px 5px;
+  border-radius: 5px;
+}
+
 .sticky-notes-container {
   display: flex;
   flex-flow: column nowrap;
 }
 .sticky-notes-container .sticky-note-group {
+  align-items: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  background-color: white;
-  padding: 5px 5px;
-  align-items: center;
   margin: 10px 20px;
-  align-items: center;
+  padding: 5px 5px;
 }
 .sticky-notes-container .sticky-note-group .sticky-check-text-div {
+  align-items: center;
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
 }
 .sticky-notes-container .sticky-note-group .sticky-check-text-div .btn-check-sticky {
   background-color: lightgreen;
@@ -187,8 +206,8 @@
 }
 
 .btn-sticky {
-  width: 20px;
+  border-radius: 5px;
   height: 20px;
   margin-right: 10px;
-  border-radius: 5px;
+  width: 20px;
 }/*# sourceMappingURL=style.css.map */

@@ -6,207 +6,230 @@ $bg-grey-card: rgb(205, 205, 205);
 $bg-blip: rgb(77, 77, 77);
 // General extenders
 .card-style {
-    background-color: $bg-grey-card;
-    border-radius: $md-rad;
-    margin: 10px;
-    padding: 10px;
-  }
+  background-color: $bg-grey-card;
+  border-radius: $md-rad;
+  margin: 10px;
+  padding: 10px;
+}
 .shadow-box {
-    border: 1px solid rgb(238, 238, 238);
-    box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.45);
-  }
+  border: 1px solid rgb(238, 238, 238);
+  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.45);
+}
 // General purpose
 // Progress bar and counter
 .container-pbar {
-    display: flex;
-    flex: 1;
-    flex-flow: column nowrap;
-    justify-content: center;
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  justify-content: center;
 
   @extend .card-style;
   .counter-container {
-      align-items: center;
-      display: flex;
-      flex: 1;
-      flex-flow: row nowrap;
-      justify-content: center;
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-flow: row nowrap;
+    justify-content: center;
 
     h3 {
-        padding-top: 6px;
-        text-align: center;
-        width: 30px;
-      }
+      padding-top: 6px;
+      text-align: center;
+      width: 30px;
+    }
     .butn {
       &:hover {
-          background-color: $light-aqua;
-        }
-      }
-    }
-  .butn {
-      border-radius: $md-rad;
-      margin: 5px 20px;
-      padding: 10px;
-
-    &:hover {
-        background-color: #bebebe;
-      }
-    }
-  .prog-bar {
-      background-color: rgb(84, 84, 84);
-      border: 1px solid black;
-      border-radius: $sm-rad;
-      height: 15px;
-
-    .prog-bar-fill {
-        transition: width 0.1s ease-out;
-      }
-    }
-  .timer-container {
-      display: flex;
-      justify-content: center;
-      padding-top: 10px;
-
-    .sec-counter {
-        font-weight: bold;
-        padding: 0px 5px;
+        background-color: $light-aqua;
       }
     }
   }
+  .butn {
+    border-radius: $md-rad;
+    margin: 5px 20px;
+    padding: 10px;
+
+    &:hover {
+      background-color: #bebebe;
+    }
+  }
+  .prog-bar {
+    background-color: rgb(84, 84, 84);
+    border: 1px solid black;
+    border-radius: $sm-rad;
+    height: 15px;
+
+    .prog-bar-fill {
+      transition: width 0.1s ease-out;
+    }
+  }
+  .timer-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+
+    .sec-counter {
+      font-weight: bold;
+      padding: 0px 5px;
+    }
+  }
+}
 // Code-Journal
 .code-journal-container {
-    display: flex;
-    flex: 1;
-    flex-flow: column nowrap;
-    justify-content: center;
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  justify-content: center;
 
   @extend .card-style;
   .labels-container {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
-    }
-  .increment-buttons-container {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-around;
-    }
-  .blip-container {
-      display: flex;
-      flex: 1;
-      justify-content: space-around;
-      margin-bottom: 6px;
-      margin-top: 3px;
-
-    .blip-ind-container {
-        background-color: $bg-blip;
-        border-radius: $sm-rad;
-        display: flex;
-        flex-flow: column-reverse nowrap;
-        height: 62px;
-        width: $blip-witdh;
-      .blip {
-          background-color: aquamarine;
-          border: 1px solid black;
-          border-radius: $sm-rad;
-          height: 15px;
-          margin: 0px 2px;
-          width: $blip-witdh - 4px;
-        }
-      }
-    }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
   }
-.control-buttons-container {
+  .increment-buttons-container {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
-    margin: 10px;
+    justify-content: space-around;
+  }
+  .blip-container {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    margin-bottom: 6px;
+    margin-top: 3px;
+
+    .blip-ind-container {
+      background-color: $bg-blip;
+      border-radius: $sm-rad;
+      display: flex;
+      flex-flow: column-reverse nowrap;
+      height: 62px;
+      width: $blip-witdh;
+
+      .blip {
+        background-color: aquamarine;
+        border: 1px solid black;
+        border-radius: $sm-rad;
+        height: 15px;
+        margin: 0px 2px;
+        width: $blip-witdh - 4px;
+      }
+    }
+  }
+}
+.control-buttons-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 10px;
 
   .butn {
-      margin: 0px 30px;
+    margin: 0px 30px;
 
     &:hover {
-        background-color: rgb(198, 122, 122);
-      }
+      background-color: rgb(198, 122, 122);
     }
+  }
   .max-amount-container {
-      align-items: center;
-      display: flex;
-      flex-flow: row nowrap;
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
 
     .butn {
-        margin: 0px 10px;
-      }
+      margin: 0px 10px;
+    }
     h6 {
-        margin: 0px;
-        padding: 0px;
-      }
+      margin: 0px;
+      padding: 0px;
     }
   }
+}
 .butn {
-    border-radius: $sm-rad;
+  border-radius: $sm-rad;
 
   &:hover {
-      background-color: $light-aqua;
-    }
+    background-color: $light-aqua;
   }
+}
 .butn.icon-web {
-    border-radius: 20px;
-    height: 64px;
-    padding: 2px;
-    width: 64px;
-  }
+  border-radius: 20px;
+  height: 64px;
+  padding: 2px;
+  width: 64px;
+}
 .svg-icons {
-    height: 32px;
-    pointer-events: none;
-    width: 32px;
-  }
+  height: 32px;
+  pointer-events: none;
+  width: 32px;
+}
 #cw-icon {
-    padding-top: 4px;
-  }
+  padding-top: 4px;
+}
 #lc-icon {
-    padding-top: 0px;
-  }
+  padding-top: 0px;
+}
 #sl-icon {
-    padding-top: 4px;
-  }
+  padding-top: 4px;
+}
 #w3-icon {
-    padding-top: 2px;
-  }
-
+  padding-top: 2px;
+}
 // Sticky notes Component
-.sticky-container{
+.sticky-container {
   @extend .card-style;
 }
+.form-add-sticky {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 
-.sticky-notes-container{
+  input[type="text"] {
+    background-color: #ddd;
+    border-radius: $sm-rad;
+    margin: 0px 5px;
+    padding: 0px 5px;
+    text-align: center;
+  }
+  input[type="submit"] {
+    margin: 0px 5px;
+    padding: 0px 5px;
+    border-radius: $sm-rad;
+
+  }
+}
+.sticky-notes-container {
   display: flex;
   flex-flow: column nowrap;
-  .sticky-note-group{
+
+  .sticky-note-group {
+    @extend .shadow-box;
+    align-items: center;
+    align-items: center;
+    background-color: white;
+    border-radius: $sm-rad;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    background-color: white;
-    padding: 5px 5px;
-    align-items: center;
     margin: 10px 20px;
-    align-items: center;
-    .sticky-check-text-div{
+    padding: 5px 5px;
+
+    .sticky-check-text-div {
+      align-items: center;
       display: flex;
       flex-flow: row wrap;
-      align-items: center;
-      .btn-check-sticky{
+
+      .btn-check-sticky {
         background-color: lightgreen;
       }
     }
-    .btn-remove-sticky{
+    .btn-remove-sticky {
       background-color: lightcoral;
       width: 30px;
     }
   }
 }
-.btn-sticky{
-  width: 20px;
+.btn-sticky {
+  border-radius: $sm-rad;
   height: 20px;
   margin-right: 10px;
-  border-radius: $sm-rad;
+  width: 20px;
 }
