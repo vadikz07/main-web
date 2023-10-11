@@ -36,7 +36,7 @@ function CodeExercisesJournal() {
     setCounters(updatedCounters);
   }
   function modifyMaxValue(value) {
-      setMaxValCounter((prevValue) => prevValue + value);
+    setMaxValCounter((prevValue) => prevValue + value);
   }
 
   function resetCounter() {
@@ -68,16 +68,28 @@ function CodeExercisesJournal() {
     <div className="code-journal-container shadow-box">
       <div className="labels-container">
         <div className="blip-container">
-          <div className="blip-ind-container" style={{height:maxValCounter*15}}>
+          <div
+            className="blip-ind-container"
+            style={{ height: maxValCounter * 15 }}
+          >
             {renderBlips("codewars", "#f05656")}
           </div>
-          <div className="blip-ind-container" style={{height:maxValCounter*15}}>
+          <div
+            className="blip-ind-container"
+            style={{ height: maxValCounter * 15 }}
+          >
             {renderBlips("leetcode", "#e7a41f")}
           </div>
-          <div className="blip-ind-container" style={{height:maxValCounter*15}}>
+          <div
+            className="blip-ind-container"
+            style={{ height: maxValCounter * 15 }}
+          >
             {renderBlips("sololearn", "#32b7e9")}
           </div>
-          <div className="blip-ind-container" style={{height:maxValCounter*15}}>
+          <div
+            className="blip-ind-container"
+            style={{ height: maxValCounter * 15 }}
+          >
             {renderBlips("w3schools", "#04aa6d")}
           </div>
         </div>

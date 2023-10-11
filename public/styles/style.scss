@@ -1,5 +1,6 @@
 $sm-rad: 5px;
 $md-rad: 10px;
+$blip-witdh: 64px;
 $light-aqua: rgb(210, 226, 226);
 $bg-grey-card: rgb(205, 205, 205);
 $bg-blip: rgb(77, 77, 77);
@@ -102,7 +103,7 @@ $bg-blip: rgb(77, 77, 77);
       display: flex;
       flex-flow: column-reverse nowrap;
       height: 62px;
-      width: 64px;
+      width: $blip-witdh;
 
       .blip {
         background-color: aquamarine;
@@ -110,8 +111,7 @@ $bg-blip: rgb(77, 77, 77);
         height: 15px;
         margin: 0px 2px;
         border: 1px solid black;
-
-        width: 60px;
+        width: $blip-witdh - 4px;
       }
     }
   }
