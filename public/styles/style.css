@@ -1,4 +1,4 @@
-.card-style, .code-journal-container, .container-pbar {
+.card-style, .sticky-container, .code-journal-container, .container-pbar {
   background-color: rgb(205, 205, 205);
   border-radius: 10px;
   margin: 10px;
@@ -157,4 +157,38 @@
 
 #w3-icon {
   padding-top: 2px;
+}
+
+.sticky-notes-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.sticky-notes-container .sticky-note-group {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background-color: white;
+  padding: 5px 5px;
+  align-items: center;
+  margin: 10px 20px;
+  align-items: center;
+}
+.sticky-notes-container .sticky-note-group .sticky-check-text-div {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.sticky-notes-container .sticky-note-group .sticky-check-text-div .btn-check-sticky {
+  background-color: lightgreen;
+}
+.sticky-notes-container .sticky-note-group .btn-remove-sticky {
+  background-color: lightcoral;
+  width: 30px;
+}
+
+.btn-sticky {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */

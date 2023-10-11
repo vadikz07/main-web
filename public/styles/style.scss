@@ -104,7 +104,6 @@ $bg-blip: rgb(77, 77, 77);
         flex-flow: column-reverse nowrap;
         height: 62px;
         width: $blip-witdh;
-
       .blip {
           background-color: aquamarine;
           border: 1px solid black;
@@ -173,3 +172,41 @@ $bg-blip: rgb(77, 77, 77);
 #w3-icon {
     padding-top: 2px;
   }
+
+// Sticky notes Component
+.sticky-container{
+  @extend .card-style;
+}
+
+.sticky-notes-container{
+  display: flex;
+  flex-flow: column nowrap;
+  .sticky-note-group{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background-color: white;
+    padding: 5px 5px;
+    align-items: center;
+    margin: 10px 20px;
+    align-items: center;
+    .sticky-check-text-div{
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      .btn-check-sticky{
+        background-color: lightgreen;
+      }
+    }
+    .btn-remove-sticky{
+      background-color: lightcoral;
+      width: 30px;
+    }
+  }
+}
+.btn-sticky{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: $sm-rad;
+}

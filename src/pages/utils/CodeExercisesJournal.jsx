@@ -100,6 +100,7 @@ function CodeExercisesJournal() {
         >
           <object
             data="/imgs/icons/codewars.svg"
+            aria-label="codewars"
             type="image/svg+xml"
             id="cw-icon"
             className="svg-icons"
@@ -111,6 +112,7 @@ function CodeExercisesJournal() {
         >
           <object
             data="/imgs/icons/leetcode.svg"
+            aria-label="leetcode"
             type="image/svg+xml"
             id="lc-icon"
             className="svg-icons"
@@ -122,6 +124,7 @@ function CodeExercisesJournal() {
         >
           <object
             data="/imgs/icons/sololearn.svg"
+            aria-label="sololearn"
             type="image/svg+xml"
             id="sl-icon"
             className="svg-icons"
@@ -133,6 +136,7 @@ function CodeExercisesJournal() {
         >
           <object
             data="/imgs/icons/w3schools.svg"
+            aria-label="w3schools"
             type="image/svg+xml"
             id="w3-icon"
             className="svg-icons"
