@@ -91,10 +91,10 @@
 }
 .code-journal-container .blip-container .blip-ind-container .blip {
   background-color: aquamarine;
+  border: 1px solid black;
   border-radius: 5px;
   height: 15px;
   margin: 0px 2px;
-  border: 1px solid black;
   width: 60px;
 }
 
@@ -111,9 +111,9 @@
   background-color: rgb(198, 122, 122);
 }
 .control-buttons-container .max-amount-container {
+  align-items: center;
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
 }
 .control-buttons-container .max-amount-container .butn {
   margin: 0px 10px;

@@ -38,7 +38,6 @@ function CodeExercisesJournal() {
   function modifyMaxValue(value) {
     setMaxValCounter((prevValue) => prevValue + value);
   }
-
   function resetCounter() {
     if (window.confirm("Are you sure do you want to reset the counters?")) {
       console.log("pressed ok");
@@ -59,7 +58,7 @@ function CodeExercisesJournal() {
     const counter = counters[value];
     const output = [];
     for (let i = 0; i < counter; i++) {
-      output.push(<Blip color={colorpassed} />);
+      output.push(<Blip key={i} color={colorpassed} />);
     }
     return output;
   }

@@ -4,6 +4,7 @@ import React from 'react'
 // color
 
 function Blip(props) {
+  
   const color = props.color;
     return (
     <div className="blip" style={{backgroundColor:color == "" ? "green" : props.color}}/>
