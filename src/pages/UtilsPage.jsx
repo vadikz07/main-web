@@ -15,7 +15,7 @@ function UtilsPage() {
       <Header />
       {/* <NavigationBar />
       <Jumbo msg="This is the Utilities Page" /> */}
-      {/* <ProgressTimer /> */}
+      <ProgressTimer />
       <CodeExercisesJournal />
       <Dice />
       <StickyNotes />
