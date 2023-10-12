@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
+import SingleDie from "../../components/SingleDie";
+import { render } from "@testing-library/react";
 
 function Dice(props) {
   const [roll, setRoll] = useState("Tirar dado/s");
+  const [results, setResults] = useState([]);
   const [sides, setSides] = useState(6);
   const [numDies, setNumDies] = useState(2);
 
@@ -25,11 +28,17 @@ function Dice(props) {
   }
 
   function increaseNumDies() {
-    setNumDies(numDies + 1);
+    const target = numDies + 1;
+    if (target <= 6) {
+      setNumDies(numDies + 1);
+    }
   }
 
   function decreaseNumDies() {
-    setNumDies(numDies - 1);
+    const target = numDies - 1;
+    if (target > 0) {
+      setNumDies(numDies - 1);
+    }
   }
 
   function rollAllDies(sides) {
@@ -39,27 +48,35 @@ function Dice(props) {
       results.push(rng);
     }
     console.log(results);
-    setRoll(results); //TODO: Update formatting on results output (roll state)
+    setResults(results); //TODO: Update formatting on results output (roll state)
+  }
+
+  function renderDies() {
+    console.log("inside renderdies");
+    const target = document.querySelector(".dice-results-container");
   }
 
   return (
     <div className="dice-container shadow-box">
       <div className="dice-header">Lanzador de dados</div>
       <div className="dice-body-container">
-        Caras: {sides} || Numero de dados: {numDies}
         <div>
-          <button id="roll-butn" onClick={() => rollAllDies(sides)}>Tirar dado/s</button>
+          <button id="roll-butn" onClick={() => rollAllDies(sides)}>
+            Tirar dado/s
+          </button>
         </div>
         <div className="row-grouping">
-          <div className="dice-body-grouping">
+          {/* <div className="dice-body-grouping">
             <p>Numero de caras:</p>
+            <h4>{sides}</h4>
             <div className="row-grouping">
               <button onClick={decreaseSides}>-</button>
               <button onClick={increaseSides}>+</button>
             </div>
-          </div>
+          </div> */}
           <div className="dice-body-grouping">
-            <p>Numero de dados</p>
+            <p>Numero de dados:</p>
+            <h4>{numDies}</h4>
             <div className="row-grouping">
               <button onClick={decreaseNumDies}>-</button>
               <button onClick={increaseNumDies}>+</button>
@@ -68,7 +85,12 @@ function Dice(props) {
         </div>
       </div>
       <div className="dice-results-container">
-        <div>Resultados: {roll}</div>
+        Resultados:
+        <div className="row-grouping">
+          {results.map((result, index) => (
+            <SingleDie className="singledie" key={index} result={result} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -226,6 +226,7 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  padding-bottom: 10px;
 }
 .dice-container #roll-butn {
   width: auto;
@@ -246,6 +247,9 @@
   text-align: center;
   margin: 10px;
 }
+.dice-container .dice-body-grouping p {
+  margin-bottom: 2px;
+}
 .dice-container button {
   width: 30px;
   height: 30px;
@@ -257,4 +261,20 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+}
+
+.singledie {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  width: 40px;
+  height: 80px;
+}
+.singledie .result-text {
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
