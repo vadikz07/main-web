@@ -4,7 +4,7 @@ import SingleDie from "../../components/SingleDie";
 import { render } from "@testing-library/react";
 
 function Dice(props) {
-  const [roll, setRoll] = useState("Tirar dado/s");
+  const [roll, setRoll] = useState("");
   const [results, setResults] = useState([]);
   const [sides, setSides] = useState(6);
   const [numDies, setNumDies] = useState(2);
@@ -62,7 +62,7 @@ function Dice(props) {
       <div className="dice-body-container">
         <div>
           <button id="roll-butn" onClick={() => rollAllDies(sides)}>
-            Tirar dado/s
+            {numDies>1?"Tirar dados":"Tirar dado"}
           </button>
         </div>
         <div className="row-grouping">
