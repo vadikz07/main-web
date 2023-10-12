@@ -43,33 +43,32 @@ function Dice(props) {
   }
 
   return (
-    <div>
-      <div>
+    <div className="dice-container shadow-box">
+      <div className="dice-header">Lanzador de dados</div>
+      <div className="dice-body-container">
         Caras: {sides} || Numero de dados: {numDies}
-      </div>
-      <div>Resultados: {roll}</div>
-      <div>
-        <button onClick={() => rollAllDies(sides)}>Tirar dado/s</button>
-      </div>
-      <div>
-        <div className="sides-dice-div">
-          <div>
-            <p className="title-div">Numero de caras del dado:</p>
+        <div>
+          <button id="roll-butn" onClick={() => rollAllDies(sides)}>Tirar dado/s</button>
+        </div>
+        <div className="row-grouping">
+          <div className="dice-body-grouping">
+            <p>Numero de caras:</p>
+            <div className="row-grouping">
+              <button onClick={decreaseSides}>-</button>
+              <button onClick={increaseSides}>+</button>
+            </div>
           </div>
-          <div>
-            <button onClick={decreaseSides}>-</button>
-            <button onClick={increaseSides}>+</button>
+          <div className="dice-body-grouping">
+            <p>Numero de dados</p>
+            <div className="row-grouping">
+              <button onClick={decreaseNumDies}>-</button>
+              <button onClick={increaseNumDies}>+</button>
+            </div>
           </div>
         </div>
-        <div className="sides-dice-div">
-          <div>
-            <p className="title-div">Numero de dados</p>
-          </div>
-          <div>
-            <button onClick={decreaseNumDies}>-</button>
-            <button onClick={increaseNumDies}>+</button>
-          </div>
-        </div>
+      </div>
+      <div className="dice-results-container">
+        <div>Resultados: {roll}</div>
       </div>
     </div>
   );

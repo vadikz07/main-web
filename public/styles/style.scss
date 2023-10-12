@@ -16,6 +16,15 @@ $bg-blip: rgb(77, 77, 77);
   box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.45);
 }
 // General purpose
+.row-grouping{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.col-grouping{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 // Progress bar and counter
 .container-pbar {
   display: flex;
@@ -183,7 +192,6 @@ $bg-blip: rgb(77, 77, 77);
   justify-content: center;
 
   input[type="text"] {
-    background-color: #ddd;
     border-radius: $sm-rad;
     margin: 0px 5px;
     padding: 0px 5px;
@@ -232,4 +240,47 @@ $bg-blip: rgb(77, 77, 77);
   height: 20px;
   margin-right: 10px;
   width: 20px;
+}
+
+// Dice container
+.dice-container{
+  @extend .card-style;
+  .dice-header{
+    font-weight: bold;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  #roll-butn{
+    width: auto;
+  }
+  .dice-body-container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .dice-body-grouping{
+    @extend .shadow-box;
+    padding: 5px;
+    border-radius: $md-rad;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+  }
+  button{
+    width: 30px;
+    height: 30px;
+    border-radius: $sm-rad;
+    margin: 0px 5px;
+  }
+  .dice-results-container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }

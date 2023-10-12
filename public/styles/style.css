@@ -1,13 +1,23 @@
-.card-style, .sticky-container, .code-journal-container, .container-pbar {
+.card-style, .dice-container, .sticky-container, .code-journal-container, .container-pbar {
   background-color: rgb(205, 205, 205);
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
 }
 
-.shadow-box, .sticky-notes-container .sticky-note-group {
+.shadow-box, .dice-container .dice-body-grouping, .sticky-notes-container .sticky-note-group {
   border: 1px solid rgb(238, 238, 238);
   box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.45);
+}
+
+.row-grouping {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.col-grouping {
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .container-pbar {
@@ -165,7 +175,6 @@
   justify-content: center;
 }
 .form-add-sticky input[type=text] {
-  background-color: #ddd;
   border-radius: 5px;
   margin: 0px 5px;
   padding: 0px 5px;
@@ -210,4 +219,42 @@
   height: 20px;
   margin-right: 10px;
   width: 20px;
+}
+
+.dice-container .dice-header {
+  font-weight: bold;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.dice-container #roll-butn {
+  width: auto;
+}
+.dice-container .dice-body-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.dice-container .dice-body-grouping {
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+}
+.dice-container button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 0px 5px;
+}
+.dice-container .dice-results-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
