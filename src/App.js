@@ -15,7 +15,7 @@ function App() {
           <Col id="app-main-column"xs={12} s={12} md={10} lg={8}>
             <BrowserRouter>
               <Routes>
-                <Route index element={<NewsPage />} />
+                <Route index element={<UtilsPage />} />
                 <Route path="/news" element={<NewsPage />} />
                 <Route path="/utils" element={<UtilsPage />} />
                 <Route path="/osprojects" element={<OpenSourceFinds />} />
